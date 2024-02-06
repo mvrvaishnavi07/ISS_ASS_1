@@ -1,0 +1,168 @@
+
+.nav{
+    
+    background-color: black;
+    font-size: 1.75vw;
+    overflow: hidden;
+}
+
+
+/* here a indicates anchor tag */
+
+.nav a:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+.nav a{
+    display:flex; 
+    float: left;
+    color: cyan;
+    padding: 2% 1.5%;
+    text-decoration: solid;
+    display: block;
+    border-radius: 40%;
+    box-shadow: #37123C;
+    margin-right: 3.5%;
+
+}
+body {
+    /* margin: 0; */
+    font-family: Arial, sans-serif;
+    background-color:whitesmoke;
+    color:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    
+#home{
+    display: flex;
+    align-items: center;
+}
+
+#home img{
+    max-width: 50%;
+    height: auto;
+
+
+}
+.profileimg img{
+  /* max-width: 15%; */
+  width: 60%;
+  /* height: auto; */
+  height: 30%;
+  /* width: 300px;
+  height: 300px; */
+
+
+} 
+.cert img{
+  /* width: 600px;
+  height: 600px; */
+  width: 55%;
+  height: 30%;
+
+}
+
+
+.content-section{
+  font-size: 2vw;
+
+}
+
+#skills img{
+  /* width: 350px;
+  height: 300px; */
+  width: 40%;
+  height: 20%;
+
+
+
+}
+
+.neonText h1 {
+  animation: pulsate 0.11s ease-in-out infinite alternate;    
+}
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+  text-align: center;
+}
+
+.neonText h1 {
+  font-size: 4.2rem;  
+  border: 0.2rem solid #fff;
+  padding: 0.4em;  
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(93, 0, 255),
+      0 0 80px rgb(55, 0, 255),
+      0 0 90px rgb(85, 0, 255),
+      0 0 100px rgb(170, 0, 255),
+      0 0 150px rgb(51, 0, 255);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+/* .myname{
+  font-size: 2vw;
+  /* text-decoration: dotted; */
+  /* display: inline; */
+
+
+  
+.switch button{
+    cursor: pointer;
+    /* border: 1px solid #555; */
+    border: 0.5vw solid navy;
+    text-align: center;
+    padding: 1%;
+    margin-right: 3.5%;
+    margin-top: 1%;
+    position: relative;
+    top: 15%;
+    left: 70%; 
+    background-color: #96C5F7;
+    font-size: 1.5vw;
+}
+
+.dark{
+    background-color: #222;
+    color: #e6e6e6;
+}
+
+section {
+  width:fit-content;
+  border: 1vw solid rgb(0, 45, 128);
+  background-color: rgb(135, 213, 235);
+  padding: 5%;
+  margin: 10%;
+  margin-left: 20%;
+  /* text-align: center; */
+  box-shadow: #222;
+}
+
+#contact img{
+  size: 100%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .switch button {
+      font-size: 2vw; /* Adjust font size for smaller screens */
+  }
+}

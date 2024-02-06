@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2ecc71;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        main {
+            padding: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button{
+            padding: 10px;
+            font-size: larger;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Blog 2</h1>
+    <header>
+        <h1>The Beauty of Nature</h1>
+    </header>
+    <main>
+        <p>
+            Nature is a source of immense beauty and inspiration. From the majestic mountains to the tranquil rivers, the diversity and splendor of the natural world never fail to captivate us.
+        </p>
+        <p>
+            One of the most striking aspects of nature is its ability to evoke a sense of wonder and awe. Whether it's witnessing a breathtaking sunrise or gazing up at a star-filled sky, nature has a way of reminding us of the vastness and complexity of the universe.
+        </p>
+        <p>
+            Beyond its aesthetic appeal, nature also provides numerous benefits for our physical and mental well-being. Spending time in nature has been shown to reduce stress, improve mood, and enhance overall health. Whether it's going for a hike in the mountains, taking a leisurely stroll in the park, or simply sitting by a peaceful lake, connecting with nature can rejuvenate the mind, body, and soul.
+        </p>
+        <h2>Ways to Appreciate and Preserve Nature:</h2>
+        <ul>
+            <li>Take regular walks or hikes in natural surroundings.</li>
+            <li>Practice mindfulness in nature by observing your surroundings with all your senses.</li>
+            <li>Participate in outdoor activities such as camping, birdwatching, or gardening.</li>
+            <li>Support conservation efforts and participate in community clean-up events.</li>
+            <li>Reduce your ecological footprint by adopting sustainable practices in your daily life.</li>
+            <li>Teach children about the importance of nature and encourage them to explore the outdoors.</li>
+        </ul>
+        <p>
+            As stewards of the Earth, it's our responsibility to cherish and protect the natural world for future generations. By appreciating the beauty of nature and taking steps to preserve it, we can ensure that its wonders continue to inspire and enrich our lives for years to come.
+        </p>
+    </main>
+    <footer>
+        &copy; 2024 The Beauty of Nature Blog
+    </footer>
+
+    <button onclick="toggleLike('blg2')">Like</button>
+    <p id="likeCounter_blg2"></p>
+
+    <div>
+        <h3>Comments</h3>
+        <p>Nature can heal me</p>
+        <p>Nature is the true beauty</p>
+    </div>
+
+    <script>
+        //Function to handle likes
+        function toggleLike(blogId) {
+            let likeCount = parseInt(localStorage.getItem(blogId + '_likes')) || 0;
+            if (likeCount === 0) {
+                likeCount = 1;
+                localStorage.setItem(blogId + '_likes', likeCount);
+                document.getElementById('likeCounter_' + blogId).innerText = likeCount + ' likes';
+            } else {
+                likeCount = 0;
+                localStorage.setItem(blogId + '_likes', likeCount);
+                document.getElementById('likeCounter_' + blogId).innerText = likeCount + ' likes';
+            }
+        }
+
+        // Display initial like count
+        let initialLikeCount = parseInt(localStorage.getItem('blg2_likes')) || 0;
+        document.getElementById('likeCounter_blg2').innerText = initialLikeCount + ' likes';
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 1</title>
+    <!-- <style>
+        body{
+            background-color: blueviolet;
+            font-size: larger;
+        }
+    </style> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffc107;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        main {
+            padding: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Blog 1</h1>
+    <header>
+        <h1>The Pursuit of Happiness</h1>
+    </header>
+    <main>
+        <p>
+            Happiness is a state of being that many of us seek. It's a feeling of contentment, joy, and fulfillment that comes from within. While external factors can influence our happiness to some extent, true happiness often comes from within ourselves.
+        </p>
+        <p>
+            There are many ways to cultivate happiness in our lives. Practicing gratitude, living in the present moment, nurturing relationships, and pursuing meaningful goals are just a few examples. Taking care of our physical and mental well-being also plays a crucial role in our overall happiness.
+        </p>
+        <p>
+            It's important to remember that happiness is not a destination but a journey. It's about finding joy in the little moments, appreciating what we have, and staying hopeful for the future. While life may have its ups and downs, cultivating a positive outlook can help us navigate through challenges and find happiness along the way.
+        </p>
+        <h2>Practical Tips for Cultivating Happiness:</h2>
+        <ul>
+            <li>Practice gratitude daily by keeping a gratitude journal.</li>
+            <li>Engage in activities that bring you joy, such as hobbies or spending time with loved ones.</li>
+            <li>Focus on the present moment through mindfulness or meditation practices.</li>
+            <li>Set and pursue meaningful goals that align with your values and interests.</li>
+            <li>Take care of your physical health by exercising regularly and eating nutritious foods.</li>
+            <li>Nurture your relationships by spending quality time with friends and family.</li>
+            <li>Limit exposure to negative influences, such as excessive news consumption or toxic relationships.</li>
+            <li>Seek professional help if you're struggling with mental health issues.</li>
+        </ul>
+        <p>
+            By incorporating these practices into your daily life, you can gradually cultivate a greater sense of happiness and well-being. Remember, happiness is a journey, not a destination, so enjoy the ride!
+        </p>
+    </main>
+    <footer>
+        &copy; 2024 The Pursuit of Happiness Blog
+    </footer>
+
+    <button onclick="toggleLike('blog1')">Like</button>
+    
+    <p id="likeCounter_blog1">0 likes</p>
+
+    <div>
+        <h3>Comments</h3>
+        <p>Happiness is the key of life</p>
+        <p>A day without being happy is a day wasted</p>
+    </div>
+
+    <script>
+        //Function to handle likes
+        function toggleLike(blogId) {
+            let likeCount = parseInt(localStorage.getItem(blogId + '_likes')) || 0;
+            if (likeCount === 0) {
+                likeCount = 1;
+                localStorage.setItem(blogId + '_likes', likeCount);
+                document.getElementById('likeCounter_' + blogId).innerText = likeCount + ' likes';
+            } else {
+                likeCount = 0;
+                localStorage.setItem(blogId + '_likes', likeCount);
+                document.getElementById('likeCounter_' + blogId).innerText = likeCount + ' likes';
+            }
+        }
+    </script>
+
+    <script>
+        let initialLikeCount = parseInt(localStorage.getItem('blog1_likes')) || 0;
+        document.getElementById('likeCounter_blog1').innerText = initialLikeCount + ' likes';
+    </script>
+</body>
+</html>
